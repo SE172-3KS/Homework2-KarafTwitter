@@ -10,4 +10,4 @@ This is the simplest possible Java webapp for testing servlet container deployme
     * (Append sudo to the above command if you get a permission denied)
 * In karaf, run:
     * feature:install war
-* Now, go to localhost:8181/hello-world-war/index.jsp to see your changes!
+* Now, go to localhost:8181/twitter-api-3ks to see your changes!

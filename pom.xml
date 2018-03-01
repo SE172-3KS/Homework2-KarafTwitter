@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.threeks</groupId>
-	<artifactId>hello-world-war</artifactId>
+	<artifactId>twitter-api-3ks</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<name>Hello World Web Application Repository</name>
-	<description>Simplest possible Java Webapp</description>
+	<name>3KS - Twitter API</name>
+	<description>CMPE 172</description>
 
 	<properties>
 		<jettyVersion>7.2.0.v20101020</jettyVersion>
@@ -18,7 +18,12 @@
 			<artifactId>jetty-server</artifactId>
 			<version>${jettyVersion}</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    </dependencies>
 
 
 

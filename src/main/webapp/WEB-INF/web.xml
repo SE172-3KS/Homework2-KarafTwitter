@@ -10,8 +10,24 @@
         <servlet-name>Hello</servlet-name>
         <servlet-class>org.threeks.HelloServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>org.threeks.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AnotherServlet</servlet-name>
+        <servlet-class>org.threeks.AnotherServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
     	<servlet-name>Hello</servlet-name>
      	<url-pattern>/hello/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>HomeServlet</servlet-name>
+     	<url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnotherServlet</servlet-name>
+        <url-pattern>/another</url-pattern>
     </servlet-mapping>
 </web-app>
