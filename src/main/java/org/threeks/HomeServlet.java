@@ -30,6 +30,8 @@ public class HomeServlet extends HttpServlet
             output = input.readLine();
         }
 
+        connection.disconnect();
+
         response.setContentType("application/json");
         request.setAttribute("responseString", responseString);
         request.getRequestDispatcher("/index.jsp").forward(request, response);
