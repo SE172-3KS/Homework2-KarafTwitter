@@ -5,6 +5,6 @@
 <body>
 	<div>
 		<a href="/twitter-api-3ks">Home</a>
-		<a href="/twitter-api-3ks">Another</a>
+		<a href="/twitter-api-3ks/another">Another</a>
 	</div>
 </body>
