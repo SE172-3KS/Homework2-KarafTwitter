@@ -20,7 +20,7 @@ public class UserTimelineServlet extends HttpServlet
         String apiUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%s&count=%d";
         String screenName = req.getParameter("name");
         int count = Integer.parseInt(req.getParameter("count"));
-        JSONArray responseJsonArray = MyConnection.getUserTimeline(String.format(apiUrl, screenName, count ));
+        JSONArray responseJsonArray = MyConnection.getArrayResponse(String.format(apiUrl, screenName, count ));
         resp.setContentType("application/json");
         req.setAttribute("jsonArray", responseJsonArray);
         req.getRequestDispatcher("/userTimeline.jsp").forward(req, resp);

@@ -58,7 +58,7 @@ public class MyConnection {
     }
     
     //get user timeline
-    public static JSONArray getUserTimeline(String apiUrl) throws IOException{
+    public static JSONArray getArrayResponse(String apiUrl) throws IOException{
     	URL url = new URL(apiUrl);
     	
     	HttpURLConnection connection = setUpConnection(url, "GET");
