@@ -1,15 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page import="org.json.simple.JSONObject"%>
 
 <jsp:include page="navigation.jsp"/>
-<html>
-<head>
-</head>
-<body>
+
 	<h1>Search a User</h1>
 	<form action="/twitter-api-3ks/" method="post">
-		<input type="string" name="name"/>
+		<input type="string" name="name" placeholder="screenName"/>
 		<button type="submit">Search User</button>
 	</form>
 	<% JSONObject json = (JSONObject) request.getAttribute("jsonObject"); %>
@@ -23,7 +19,7 @@
 		 	<li>ScreenName: <%=json.get("screen_name") %></li>
 		 	<li>Friends: <%=json.get("friends_count") %></li>
 		 	<li>Followers: <%=json.get("followers_count") %></li>
-		 	<li>Text: <%=json.get("text") %>
+		 	<li>Text: <%=json.get("texts") %>
 		 </ul>
 		 
 		<%

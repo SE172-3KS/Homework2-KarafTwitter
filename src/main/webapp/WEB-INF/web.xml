@@ -15,8 +15,8 @@
         <servlet-class>org.threeks.HomeServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AnotherServlet</servlet-name>
-        <servlet-class>org.threeks.AnotherServlet</servlet-class>
+        <servlet-name>UserTimelineServlet</servlet-name>
+        <servlet-class>org.threeks.UserTimelineServlet</servlet-class>
     </servlet>
     <servlet-mapping>
     	<servlet-name>Hello</servlet-name>
@@ -27,7 +27,7 @@
      	<url-pattern>/</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AnotherServlet</servlet-name>
-        <url-pattern>/another</url-pattern>
+        <servlet-name>UserTimelineServlet</servlet-name>
+        <url-pattern>/userTimeline</url-pattern>
     </servlet-mapping>
 </web-app>

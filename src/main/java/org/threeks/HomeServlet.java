@@ -18,20 +18,9 @@ public class HomeServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String apiUrl = "https://api.twitter.com/1.1/users/show.json?screen_name=%s";
-        String responseString = MyConnection.getResponse(String.format(apiUrl, req.getParameter("name")));
-
+        JSONObject responseJson = MyConnection.getResponse(String.format(apiUrl, req.getParameter("name")));
         resp.setContentType("application/json");
-       
-        JSONParser parser = new JSONParser();
-        JSONObject json = null;
-        
-        try{
-        	json = (JSONObject) parser.parse(responseString);
-        }catch(Exception ex){
-        	ex.printStackTrace();
-        }
-        
-        req.setAttribute("jsonObject", json);
+        req.setAttribute("jsonObject", responseJson);
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }

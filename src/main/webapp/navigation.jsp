@@ -1,3 +1,4 @@
+<%@ page import="org.json.simple.JSONObject"%>
 <html>
 <head>
 	<title>3KS Twitter API</title>
@@ -5,6 +6,5 @@
 <body>
 	<div>
 		<a href="/twitter-api-3ks">Home</a>
-		<a href="/twitter-api-3ks/another">Another</a>
+		<a href="/twitter-api-3ks/userTimeline">User Timeline</a>
 	</div>
-</body>
