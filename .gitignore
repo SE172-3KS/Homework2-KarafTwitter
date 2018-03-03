@@ -7,3 +7,4 @@
 *.iml
 build.sh
 .DS_Store
+*.swp
