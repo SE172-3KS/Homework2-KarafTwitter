@@ -4,8 +4,8 @@
 <body>
     <h1>See Friendship</h1>
     <form action="/twitter-api-3ks/seeFriendship" method="POST">
-        <input type="string" name="source" placeholder="Source Screen Name"/>
-        <input type="string" name="target" placeholder="Target Screen Name"/>
+        <input type="string" name="source" placeholder="Source Screen Name" required="" />
+        <input type="string" name="target" placeholder="Target Screen Name"required="" />
         <button type="submit">See Friendship</button>
     </form>
 

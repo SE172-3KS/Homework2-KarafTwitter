@@ -6,7 +6,7 @@
 <body>
     <h1>Get Friends</h1>
     <form action="/twitter-api-3ks/getFriends" method="POST">
-        <input type="string" name="screenName" placeholder="Screen Name"/>
+        <input type="string" name="screenName" placeholder="Screen Name" required=""/>
         <button type="submit">Get Friends</button>
     </form>
 

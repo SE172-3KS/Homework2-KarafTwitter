@@ -6,8 +6,8 @@
 <body>
     <h1>Search Tweets</h1>
     <form action="/twitter-api-3ks/searchTweets" method="POST">
-        <input type="string" name="query" placeholder="Query"/>
-        <input type="number" name="count" placeholder="Count"/>
+        <input type="string" name="query" placeholder="Query" required="" />
+        <input type="number" name="count" placeholder="Count"required="" />
         <button type="submit">Search Tweets</button>
     </form>
 

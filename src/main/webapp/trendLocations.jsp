@@ -6,10 +6,19 @@
 <body>
     <h1>Trend Locations</h1>
     <form action="/twitter-api-3ks/trendLocations" method="POST">
-        <input type="string" name="lat" placeholder="lat"/>
-        <input type="string" name="long" placeholder="long"/>
+        <input type="string" name="lat"  value=37.78 />
+        <input type="string" name="long" value=-122.40 />
         <button type="submit">See Locations</button>
     </form>
+
+    <script type="text/javascript">
+    if (lat != null || long != null)
+    {
+        function alertName(){
+        alert("Form has been submitted");
+        } 
+    }
+    </script> 
 
     <% JSONArray locationArr = (JSONArray) request.getAttribute("jsonArray"); %>
         <%

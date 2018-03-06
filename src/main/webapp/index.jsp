@@ -6,7 +6,7 @@
 <body>
 	<h1>Search a User</h1>
 	<form action="/twitter-api-3ks/" method="post">
-		<input type="string" name="name" placeholder="screenName"/>
+		<input type="string" name="name" placeholder="screenName" required=""/>
 		<button type="submit">Search User</button>
 	</form>
 	<% JSONObject json = (JSONObject) request.getAttribute("jsonObject"); %>

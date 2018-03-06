@@ -6,8 +6,8 @@
 <body>
 	<h1>User Timeline</h1>
 	<form action="/twitter-api-3ks/userTimeline" method="POST">
-		<input type="string" name="name" placeholder="screenName"/>
-		<input type="number" name="count" placeholder="count"/>
+		<input type="string" name="name" placeholder="screenName" required=""/>
+		<input type="number" name="count" placeholder="count" required=""/>
 		<button type="submit">See Timeline</button>
 	</form>
 
