@@ -3,6 +3,7 @@
 
 <jsp:include page="navigation.jsp"/>
 
+<body>
 	<h1>Search a User</h1>
 	<form action="/twitter-api-3ks/" method="post">
 		<input type="string" name="name" placeholder="screenName"/>

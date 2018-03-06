@@ -4,13 +4,11 @@
 <%@ page import="java.util.Iterator"%>
 
 <body>
-    <h1>Search Tweets</h1>
-    <form action="/twitter-api-3ks/searchTweets" method="POST">
-        <input type="string" name="query" placeholder="Query"/>
-        <input type="number" name="count" placeholder="Count"/>
-        <button type="submit">Search Tweets</button>
+    <h1>Get Followers</h1>
+    <form action="/twitter-api-3ks/getFollowers" method="POST">
+        <input type="string" name="screenName" placeholder="Screen Name"/>
+        <button type="submit">Get Followers</button>
     </form>
-
 
     <%
     JSONObject queryResponse = (JSONObject)request.getAttribute("jsonObject");
@@ -18,16 +16,16 @@
 
     <%
     if (queryResponse != null) {
-        JSONArray statuses = (JSONArray)queryResponse.get("statuses");
+        JSONArray statuses = (JSONArray)queryResponse.get("users");
         Iterator<JSONObject> it = statuses.iterator();
         while (it.hasNext()) {
             JSONObject obj = it.next();
             %>
-            <p>Tweet: <%=obj.get("text")%></p>
-            <p>Created at: <%=obj.get("created_at")%></p>
+            <p>Name: <%=obj.get("name")%></p>
+            <p>Screen Name: <%=obj.get("screen_name")%></p>
+            <p>Followers Count: <%=obj.get("followers_count")%></p>
             <br>
             <%
-
         }
     }
     %>

@@ -1,4 +1,3 @@
-<%@ page import="org.json.simple.JSONObject"%>
 <html>
 <head>
 	<title>3KS Twitter API</title>
@@ -9,5 +8,8 @@
 		<a href="/twitter-api-3ks/userTimeline">User Timeline</a>
 		<a href="/twitter-api-3ks/searchTweets">Search Tweets</a>
 		<a href="/twitter-api-3ks/trendLocations">Trend Locations</a>
-
+		<a href="/twitter-api-3ks/getFriends">Get Friends</a>
+		<a href="/twitter-api-3ks/getFollowers">Get Followers</a>
+		<a href="/twitter-api-3ks/seeFriendship">See Friendship</a>
 	</div>
+</body>

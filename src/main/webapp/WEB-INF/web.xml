@@ -22,9 +22,21 @@
         <servlet-name>SearchTweetsServlet</servlet-name>
         <servlet-class>org.threeks.SearchTweetsServlet</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>TrendLocationsServlet</servlet-name>
         <servlet-class>org.threeks.TrendLocationsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetFriendsServlet</servlet-name>
+        <servlet-class>org.threeks.GetFriendsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SeeFriendshipServlet</servlet-name>
+        <servlet-class>org.threeks.SeeFriendshipServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetFollowersServlet</servlet-name>
+        <servlet-class>org.threeks.GetFollowersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
     	<servlet-name>Hello</servlet-name>
@@ -42,8 +54,20 @@
         <servlet-name>SearchTweetsServlet</servlet-name>
         <url-pattern>/searchTweets</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>TrendLocationsServlet</servlet-name>
         <url-pattern>/trendLocations</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFriendsServlet</servlet-name>
+        <url-pattern>/getFriends</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SeeFriendshipServlet</servlet-name>
+        <url-pattern>/seeFriendship</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFollowersServlet</servlet-name>
+        <url-pattern>/getFollowers</url-pattern>
     </servlet-mapping>
 </web-app>
