@@ -38,6 +38,10 @@
         <servlet-name>GetFollowersServlet</servlet-name>
         <servlet-class>org.threeks.GetFollowersServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserFavoritesServlet</servlet-name>
+        <servlet-class>org.threeks.UserFavoritesServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
     	<servlet-name>Hello</servlet-name>
      	<url-pattern>/hello/*</url-pattern>
@@ -70,4 +74,9 @@
         <servlet-name>GetFollowersServlet</servlet-name>
         <url-pattern>/getFollowers</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserFavoritesServlet</servlet-name>
+        <url-pattern>/userFavorites</url-pattern>
+    </servlet-mapping>
+
 </web-app>

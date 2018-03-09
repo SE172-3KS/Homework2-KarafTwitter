@@ -11,5 +11,6 @@
 		<a href="/twitter-api-3ks/getFriends">Get Friends</a>
 		<a href="/twitter-api-3ks/getFollowers">Get Followers</a>
 		<a href="/twitter-api-3ks/seeFriendship">See Friendship</a>
+		<a href="/twitter-api-3ks/userFavorites">User Favorites</a>
 	</div>
 </body>
