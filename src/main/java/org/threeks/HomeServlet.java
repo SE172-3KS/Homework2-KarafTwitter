@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HomeServlet extends HttpServlet
 {
+    protected static final String apiUrl = "https://api.twitter.com/1.1/users/show.json?screen_name=%s";
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("jsonObject", null);
         request.getRequestDispatcher("/index.jsp").forward(request, response);
@@ -17,7 +18,6 @@ public class HomeServlet extends HttpServlet
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String apiUrl = "https://api.twitter.com/1.1/users/show.json?screen_name=%s";
         JSONObject responseJson = MyConnection.getResponse(String.format(apiUrl, req.getParameter("name")));
         resp.setContentType("application/json");
         req.setAttribute("jsonObject", responseJson);
