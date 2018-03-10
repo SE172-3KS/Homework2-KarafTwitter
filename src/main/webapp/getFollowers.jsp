@@ -6,7 +6,7 @@
 <body>
     <h1>Get Followers</h1>
     <form action="/twitter-api-3ks/getFollowers" method="POST">
-        <input type="string" name="screenName" placeholder="Screen Name"/>
+        <input type="string" name="screenName" placeholder="Screen Name" required="" />
         <button type="submit">Get Followers</button>
     </form>
 
