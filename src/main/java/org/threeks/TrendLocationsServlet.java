@@ -10,6 +10,8 @@ import org.json.simple.JSONArray;
 
 public class TrendLocationsServlet extends HttpServlet
 {
+    protected static final String apiUrl = "https://api.twitter.com/1.1/trends/closest.json?lat=%f&long=%f";
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {	
         request.getRequestDispatcher("/trendLocations.jsp").forward(request, response);
@@ -17,7 +19,6 @@ public class TrendLocationsServlet extends HttpServlet
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String apiUrl = "https://api.twitter.com/1.1/trends/closest.json?lat=%f&long=%f";
         Double lat = Double.parseDouble(req.getParameter("lat"));
         Double longi = Double.parseDouble(req.getParameter("long"));
         JSONArray responseJsonArray = MyConnection.getArrayResponse(String.format(apiUrl,lat,longi));

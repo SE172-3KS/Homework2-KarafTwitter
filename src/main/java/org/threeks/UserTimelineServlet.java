@@ -10,6 +10,7 @@ import org.json.simple.JSONArray;
 
 public class UserTimelineServlet extends HttpServlet
 {
+    protected static final String apiUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%s&count=%d";
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {	
         request.getRequestDispatcher("/userTimeline.jsp").forward(request, response);
@@ -17,7 +18,6 @@ public class UserTimelineServlet extends HttpServlet
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String apiUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%s&count=%d";
         String screenName = req.getParameter("name");
         int count = Integer.parseInt(req.getParameter("count"));
         JSONArray responseJsonArray = MyConnection.getArrayResponse(String.format(apiUrl, screenName, count ));
