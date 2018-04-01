@@ -77,9 +77,4 @@ public class APITestCase {
             String.format(UserTimelineServlet.apiUrl, name, count)
         ));
     }
-   
-   @Test
-   public void invalidTest() throws Exception {
-      assertNotNull(null);
-   }
 }
